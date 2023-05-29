@@ -104,4 +104,9 @@ class ProductController extends Controller
  
          return view('myorders',['orders'=>$orders]);
     }
+    function cancleOrder($id)
+    {
+        Order::destroy($id);
+        return redirect('myorders');
+}
 }

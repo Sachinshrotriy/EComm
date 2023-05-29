@@ -4,6 +4,7 @@
      <div class="col-sm-10">
         <div class="trending-wrapper">
             <h4>my orders </h4>
+           
             @foreach($orders as $item)
             <div class=" row searched-item cart-list-devider">
              <div class="col-sm-3">
@@ -20,8 +21,12 @@
                       <h5>Payment Method : {{$item->Payment_method}}</h5>
 
                     </div>
+             
              </div>
             
+             <div class="col-sm-3">
+            <a href="/cancleorder/{{$item->id}}" class="btn btn-warning pull-right">Cancel Order</a>
+            </div>
             </div>
             @endforeach
           </div>
